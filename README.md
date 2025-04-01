@@ -5,40 +5,45 @@
 ![Rollup](https://img.shields.io/badge/rollup-2.x-EC4A3F.svg?logo=rollup.js)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E.svg?logo=javascript)
 
-Un boilerplate per librerie Node.js con JavaScript e Rollup. Perfetto per creare pacchetti JavaScript ottimizzati e pronti per la distribuzione.
+A modern boilerplate for Node.js libraries with JavaScript and Rollup. Perfect for creating optimized JavaScript packages ready for distribution.
+
+**Topics:** `node` `javascript` `rollup` `library` `npm-package` `bundler` `es-modules` `offline-first` `documentation`
 
 ## 📋 Table of Contents
 - [Features](#-features)
 - [Project Structure](#-project-structure)
 - [Project Setup](#-project-setup)
+- [Development](#-development)
 - [Build](#-build)
 - [Package Managers](#-package-managers)
 - [Resources](#-resources)
 
 ## ✨ Features
 
-- 📦 Bundling ottimizzato con Rollup
-- 🔍 JavaScript linting con ESLint
-- 🎨 Formattazione del codice con Prettier
-- 🧪 Testing con Jest
-- 📤 Supporto per import/export ES Modules
-- 💾 Funzionalità 100% offline
-- 🔄 Supporto per hot-reload durante lo sviluppo
-- 📊 Strumenti per generazione documentazione
+- 📦 Optimized bundling with Rollup
+- 🔍 JavaScript linting with ESLint
+- 🎨 Code formatting with Prettier
+- 🧪 Testing with Jest
+- 📤 Support for ES Modules import/export
+- 💾 100% offline functionality
+- 🔄 Support for hot-reload during development
+- 📊 Tools for documentation generation
+- 🔧 Babel configuration for modern JavaScript
 
 ## 🗂️ Project Structure
 
 ```
 bl-rollup-node-javascript/
-├── dist/               # Output directory per il bundle
-├── src/                # Codice sorgente
-│   ├── index.js        # Entry point principale
-│   └── lib/            # Moduli e funzionalità della libreria
-├── test/               # File di test
-├── .eslintrc           # Configurazione ESLint
-├── rollup.config.js    # Configurazione Rollup
-├── jest.config.js      # Configurazione Jest
-└── package.json        # Dipendenze e script del progetto
+├── dist/               # Output directory for the bundle
+├── src/                # JavaScript source code
+│   ├── index.js        # Main entry point
+│   └── lib/            # Library modules and functionality
+├── test/               # Test files
+├── .eslintrc           # ESLint configuration
+├── rollup.config.js    # Rollup configuration
+├── jest.config.js      # Jest configuration
+├── babel.config.js     # Babel configuration
+└── package.json        # Project dependencies and scripts
 ```
 
 ## 🚀 Project Setup
@@ -49,7 +54,7 @@ bl-rollup-node-javascript/
 $ pnpm install
 ```
 
-### 🔧 Development
+## 🔧 Development
 
 ```bash
 $ pnpm dev
@@ -63,97 +68,106 @@ $ pnpm build
 
 ## 📦 Package Managers
 
-Questo progetto supporta diversi package manager. Ecco come utilizzare ciascuno:
+This project supports multiple package managers. Here's how to use each one:
 
 ### NPM
 
-NPM è il package manager predefinito per Node.js.
+NPM is the default package manager for Node.js.
 
-**Installazione NPM:**
+**Install NPM:**
 ```bash
-# Incluso con l'installazione di Node.js
+# Included with Node.js installation
 ```
 
-**Setup progetto con NPM:**
+**Setup project with NPM:**
 ```bash
-# Installazione dipendenze
+# Install dependencies
 $ npm install
 
-# Build della libreria
+# Development mode
+$ npm run dev
+
+# Build the library
 $ npm run build
 ```
 
-**Caratteristiche principali:**
-- 📚 Vasto ecosistema di pacchetti
-- 🔒 Struttura gerarchica di node_modules
-- 📋 Package.json per la gestione delle dipendenze
+**Key features:**
+- 📚 Vast package ecosystem
+- 🔒 Hierarchical node_modules structure
+- 📋 Package.json for dependency management
 
 ### Yarn
 
-Yarn è un'alternativa rapida, affidabile e sicura a NPM.
+Yarn is a fast, reliable, and secure alternative to NPM.
 
-**Installazione Yarn:**
+**Install Yarn:**
 ```bash
-# Installazione tramite NPM
+# Install using NPM
 $ npm install -g yarn
 ```
 
-**Setup progetto con Yarn:**
+**Setup project with Yarn:**
 ```bash
-# Installazione dipendenze
+# Install dependencies
 $ yarn
 
-# Build della libreria
+# Development mode
+$ yarn dev
+
+# Build the library
 $ yarn build
 ```
 
-**Caratteristiche principali:**
-- ⚡ Velocità di installazione superiore
-- 📦 Caching offline
-- 🔒 Maggiore sicurezza con checksum
-- 📋 yarn.lock per installazioni deterministiche
+**Key features:**
+- ⚡ Faster installation speeds
+- 📦 Offline caching
+- 🔒 Better security with checksums
+- 📋 yarn.lock for deterministic installations
 
 ### PNPM
 
-PNPM è un package manager efficiente in termini di spazio su disco.
+PNPM is a disk-space efficient package manager.
 
-**Installazione PNPM:**
+**Install PNPM:**
 ```bash
-# Installazione tramite NPM
+# Install using NPM
 $ npm install -g pnpm
 ```
 
-**Setup progetto con PNPM:**
+**Setup project with PNPM:**
 ```bash
-# Installazione dipendenze
+# Install dependencies
 $ pnpm install
 
-# Build della libreria
+# Development mode
+$ pnpm dev
+
+# Build the library
 $ pnpm build
 ```
 
-**Caratteristiche principali:**
-- 💾 Risparmio di spazio su disco tramite symlink
-- 🚀 Velocità di installazione elevata
-- 🔄 Storage con indirizzamento basato sul contenuto
-- 📋 pnpm-lock.yaml per blocco delle dipendenze
+**Key features:**
+- 💾 Disk space savings through symlinks
+- 🚀 Fast installation speeds
+- 🔄 Content-addressable storage
+- 📋 pnpm-lock.yaml for dependency lock
 
-### Confronto
+### Comparison
 
-| Funzionalità          | NPM     | Yarn    | PNPM    |
+| Feature               | NPM     | Yarn    | PNPM    |
 |-----------------------|---------|---------|---------|
-| Utilizzo disco        | Alto    | Alto    | Basso   |
-| Velocità installazione| Lenta   | Veloce  | Velocissima |
-| Installazioni parallele| Limitato| Sì      | Sì      |
-| Supporto workspaces   | Limitato| Buono   | Ottimo  |
-| Modalità offline      | Limitato| Buono   | Buono   |
-| Sicurezza             | Buona   | Migliore| Migliore|
+| Disk usage            | High    | High    | Low     |
+| Installation speed    | Slow    | Fast    | Fastest |
+| Parallel installations| Limited | Yes     | Yes     |
+| Workspace support     | Limited | Good    | Best    |
+| Offline mode          | Limited | Good    | Good    |
+| Security              | Good    | Better  | Better  |
 
 ## 📚 Resources
 
 - [Node.js Documentation](https://nodejs.org/en/docs/)
+- [JavaScript MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Rollup Documentation](https://rollupjs.org/guide/en/)
-- [JavaScript MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [NPM Documentation](https://docs.npmjs.com/)
 - [Yarn Documentation](https://yarnpkg.com/getting-started)
 - [PNPM Documentation](https://pnpm.io/motivation)
